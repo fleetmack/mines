@@ -1,0 +1,32 @@
+select distinct id_number, record_type_code, pref_class_year, pref_mail_name, pref_name_sort, record_status_code
+from a_dw_pyramid
+where year_of_giving >= '1970'
+and alloc IN
+('1530',	 
+'778'	,   
+'4718'	 , 
+'2013'	  ,
+'4013'		,   
+'4310'	   ,
+'522'	   ,
+'525'	   ,
+'1552'		,   
+'4552'	   ,
+'1390'		,   
+'4752'		 ,  
+'1662'		  , 
+'782'	  ,
+'503'		,   
+'1832'		 ,  
+'4832'	   ,
+'4662'	   ,
+'4178'	   ,
+'1647'   ,
+'898'	  , 
+'1489'  ,
+'4175'	 ,  
+'722'   ,
+'4464'  ,
+'B5602'  , 
+'B4736' ,
+'B4731')

@@ -1,0 +1,26 @@
+/*** Checks for Incomplete Zip Codes ***/
+  INSERT INTO a_data_errors
+      (SELECT e.id_number,
+              ' ',
+              e.pref_mail_name,
+              m_table,
+              'Preferred Address Zip Code is incomplete',
+              'Adjust Zip Code so that it is complete',
+              ' ',
+              a.operator_name,
+              ' ',
+              TO_CHAR(a.date_modified,'YYYYMMDD')
+        FROM address a,
+              entity e
+WHERE a.addr_type_code IN ('H', 'B')
+AND a.zipcode not like '_____-____'
+AND a.zipcode not like '_____-ND'
+AND a.country_code = ' '
+AND a.street1 > ' '
+AND a.addr_pref_ind = 'Y'
+AND a.city > ' '
+AND a.id_number = e.id_number
+AND e.person_or_org = 'P'
+AND a.date_modified       >= m_date);
+ORDER BY a.date_modified
+  COMMIT;

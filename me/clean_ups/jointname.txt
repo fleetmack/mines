@@ -1,0 +1,20 @@
+/*** Not really sure what they entered wrong ***/
+  INSERT INTO a_data_errors
+      (SELECT e.id_number,
+              ' ',
+              e.pref_mail_name,
+              m_table,
+              ' ',
+              ' ',
+              ' ',
+              e.operator_name,
+              ' ',
+              TO_CHAR(e.date_modified,'YYYYMMDD')
+         FROM entity                e
+        WHERE pref_jnt_mail_name1||' '||pref_jnt_mail_name2 like '% and %'
+          AND report_name NOT LIKE '% and %'
+          AND record_status_code = 'A'
+          AND record_type_code IN ('PA', 'PP','PX', 'FR')
+          AND spouse_id_number = ' '
+    AND e.date_modified       >= m_date);
+  COMMIT;
