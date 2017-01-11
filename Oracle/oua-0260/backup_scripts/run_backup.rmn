@@ -1,0 +1,16 @@
+run
+{
+CONFIGURE CONTROLFILE AUTOBACKUP ON;
+
+configure retention policy to recovery window of 7 days;
+
+crosscheck backup;
+crosscheck archivelog all;
+crosscheck copy;
+
+delete noprompt obsolete;
+
+backup as compressed backupset database plus archivelog delete input;
+}
+
+exit

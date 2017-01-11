@@ -1,0 +1,1040 @@
+
+Recovery Manager: Release 11.1.0.6.0 - Production on Mon Feb 20 21:00:12 2012
+
+Copyright (c) 1982, 2007, Oracle.  All rights reserved.
+
+connected to target database: GIANTCHI (DBID=1913784263)
+using target database control file instead of recovery catalog
+
+RMAN> run
+2> {
+3> CONFIGURE CONTROLFILE AUTOBACKUP ON;
+4> 
+5> configure retention policy to recovery window of 7 days;
+6> 
+7> crosscheck backup;
+8> crosscheck archivelog all;
+9> crosscheck copy;
+10> 
+11> delete noprompt obsolete;
+12> 
+13> backup as compressed backupset database plus archivelog delete input;
+14> }
+15> 
+16> exit
+old RMAN configuration parameters:
+CONFIGURE CONTROLFILE AUTOBACKUP ON;
+new RMAN configuration parameters:
+CONFIGURE CONTROLFILE AUTOBACKUP ON;
+new RMAN configuration parameters are successfully stored
+
+old RMAN configuration parameters:
+CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 7 DAYS;
+new RMAN configuration parameters:
+CONFIGURE RETENTION POLICY TO RECOVERY WINDOW OF 7 DAYS;
+new RMAN configuration parameters are successfully stored
+
+allocated channel: ORA_DISK_1
+channel ORA_DISK_1: SID=194 device type=DISK
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_11\O1_MF_NNNDF_TAG20120211T211226_7MGH1K22_.BKP RECID=539 STAMP=774997953
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_11\O1_MF_ANNNN_TAG20120211T211739_7MGHC9S1_.BKP RECID=540 STAMP=774998265
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_11\O1_MF_S_774998267_7MGHCL43_.BKP RECID=541 STAMP=774998274
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_12\O1_MF_ANNNN_TAG20120212T210118_7MK32MRV_.BKP RECID=543 STAMP=775084003
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_12\O1_MF_NNNDF_TAG20120212T211158_7MK3DOG6_.BKP RECID=544 STAMP=775084325
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_12\O1_MF_ANNNN_TAG20120212T211701_7MK3P49B_.BKP RECID=545 STAMP=775084628
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_12\O1_MF_S_775084630_7MK3PDRK_.BKP RECID=546 STAMP=775084636
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_13\O1_MF_ANNNN_TAG20120213T210327_7MMQ950Q_.BKP RECID=547 STAMP=775170228
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_13\O1_MF_ANNNN_TAG20120213T210327_7MMQM0GR_.BKP RECID=548 STAMP=775170544
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_13\O1_MF_NNNDF_TAG20120213T211408_7MMQWQYZ_.BKP RECID=549 STAMP=775170855
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_13\O1_MF_ANNNN_TAG20120213T211912_7MMR6781_.BKP RECID=550 STAMP=775171159
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_13\O1_MF_S_775171161_7MMR6J27_.BKP RECID=551 STAMP=775171168
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_14\O1_MF_ANNNN_TAG20120214T210115_7MPCJZQX_.BKP RECID=552 STAMP=775256495
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_14\O1_MF_ANNNN_TAG20120214T210115_7MPCTJ6R_.BKP RECID=553 STAMP=775256800
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_14\O1_MF_NNNDF_TAG20120214T211144_7MPD47RX_.BKP RECID=554 STAMP=775257111
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_14\O1_MF_ANNNN_TAG20120214T211658_7MPDG0TD_.BKP RECID=555 STAMP=775257424
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_14\O1_MF_S_775257426_7MPDG98W_.BKP RECID=556 STAMP=775257433
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_15\O1_MF_ANNNN_TAG20120215T210108_7MRZWRGM_.BKP RECID=557 STAMP=775342888
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_15\O1_MF_ANNNN_TAG20120215T210108_7MS06W6R_.BKP RECID=558 STAMP=775343212
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_15\O1_MF_NNNDF_TAG20120215T211155_7MS0JM10_.BKP RECID=559 STAMP=775343523
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_15\O1_MF_ANNNN_TAG20120215T211709_7MS0TCSN_.BKP RECID=560 STAMP=775343835
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_15\O1_MF_S_775343837_7MS0TNBR_.BKP RECID=561 STAMP=775343844
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_16\O1_MF_ANNNN_TAG20120216T210114_7MVN8YTP_.BKP RECID=562 STAMP=775429294
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_16\O1_MF_ANNNN_TAG20120216T210114_7MVNM345_.BKP RECID=563 STAMP=775429619
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_16\O1_MF_NNNDF_TAG20120216T211202_7MVNWSZ4_.BKP RECID=564 STAMP=775429929
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_16\O1_MF_ANNNN_TAG20120216T211716_7MVO6LSS_.BKP RECID=565 STAMP=775430242
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_16\O1_MF_S_775430244_7MVO6V3W_.BKP RECID=566 STAMP=775430251
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_17\O1_MF_ANNNN_TAG20120217T210113_7MY8NXQT_.BKP RECID=567 STAMP=775515693
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_17\O1_MF_ANNNN_TAG20120217T210113_7MY8Z26O_.BKP RECID=568 STAMP=775516018
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_17\O1_MF_NNNDF_TAG20120217T211212_7MY993HK_.BKP RECID=569 STAMP=775516339
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_17\O1_MF_ANNNN_TAG20120217T211725_7MY9LW5B_.BKP RECID=570 STAMP=775516652
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_17\O1_MF_S_775516654_7MY9M4RW_.BKP RECID=571 STAMP=775516660
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_18\O1_MF_ANNNN_TAG20120218T210113_7N0X0OG4_.BKP RECID=572 STAMP=775602085
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_18\O1_MF_ANNNN_TAG20120218T210113_7N0XBT86_.BKP RECID=573 STAMP=775602410
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_18\O1_MF_NNNDF_TAG20120218T211154_7N0XNK7T_.BKP RECID=574 STAMP=775602721
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_18\O1_MF_ANNNN_TAG20120218T211707_7N0XYB5W_.BKP RECID=575 STAMP=775603034
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_18\O1_MF_S_775603036_7N0XYLJP_.BKP RECID=576 STAMP=775603042
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_19\O1_MF_ANNNN_TAG20120219T210116_7N3KDR97_.BKP RECID=577 STAMP=775688488
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_19\O1_MF_ANNNN_TAG20120219T210116_7N3KPWFL_.BKP RECID=578 STAMP=775688812
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_19\O1_MF_NNNDF_TAG20120219T211206_7N3L0XRW_.BKP RECID=579 STAMP=775689133
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_19\O1_MF_ANNNN_TAG20120219T211720_7N3LBPFP_.BKP RECID=580 STAMP=775689446
+crosschecked backup piece: found to be 'AVAILABLE'
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_19\O1_MF_S_775689448_7N3LBYS0_.BKP RECID=581 STAMP=775689454
+Crosschecked 42 objects
+
+
+released channel: ORA_DISK_1
+allocated channel: ORA_DISK_1
+channel ORA_DISK_1: SID=194 device type=DISK
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05718_0765364233.001 RECID=11435 STAMP=775634420
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05719_0765364233.001 RECID=11437 STAMP=775634482
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05720_0765364233.001 RECID=11439 STAMP=775634602
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05721_0765364233.001 RECID=11441 STAMP=775634775
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05722_0765364233.001 RECID=11443 STAMP=775634906
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05723_0765364233.001 RECID=11445 STAMP=775634925
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05724_0765364233.001 RECID=11447 STAMP=775634943
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05725_0765364233.001 RECID=11449 STAMP=775634959
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05726_0765364233.001 RECID=11451 STAMP=775634975
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05727_0765364233.001 RECID=11453 STAMP=775634991
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05728_0765364233.001 RECID=11455 STAMP=775635007
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05729_0765364233.001 RECID=11457 STAMP=775635023
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05730_0765364233.001 RECID=11459 STAMP=775635039
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05731_0765364233.001 RECID=11461 STAMP=775635056
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05732_0765364233.001 RECID=11463 STAMP=775635072
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05733_0765364233.001 RECID=11465 STAMP=775635088
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05734_0765364233.001 RECID=11467 STAMP=775635106
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05735_0765364233.001 RECID=11469 STAMP=775635125
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05736_0765364233.001 RECID=11471 STAMP=775635130
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05737_0765364233.001 RECID=11473 STAMP=775635134
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05738_0765364233.001 RECID=11475 STAMP=775635138
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05739_0765364233.001 RECID=11477 STAMP=775635143
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05740_0765364233.001 RECID=11479 STAMP=775635148
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05741_0765364233.001 RECID=11481 STAMP=775635153
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05742_0765364233.001 RECID=11483 STAMP=775635159
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05743_0765364233.001 RECID=11485 STAMP=775635172
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05744_0765364233.001 RECID=11487 STAMP=775635179
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05745_0765364233.001 RECID=11489 STAMP=775635187
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05746_0765364233.001 RECID=11491 STAMP=775635191
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05747_0765364233.001 RECID=11493 STAMP=775635196
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05748_0765364233.001 RECID=11495 STAMP=775635200
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05749_0765364233.001 RECID=11497 STAMP=775635208
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05750_0765364233.001 RECID=11499 STAMP=775635212
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05751_0765364233.001 RECID=11501 STAMP=775635219
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05752_0765364233.001 RECID=11503 STAMP=775635224
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05753_0765364233.001 RECID=11505 STAMP=775635230
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05754_0765364233.001 RECID=11507 STAMP=775635235
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05755_0765364233.001 RECID=11509 STAMP=775635241
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05756_0765364233.001 RECID=11511 STAMP=775635248
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05757_0765364233.001 RECID=11513 STAMP=775635257
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05758_0765364233.001 RECID=11515 STAMP=775635303
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05759_0765364233.001 RECID=11517 STAMP=775635333
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05760_0765364233.001 RECID=11519 STAMP=775635369
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05761_0765364233.001 RECID=11521 STAMP=775635462
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05762_0765364233.001 RECID=11523 STAMP=775635504
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05763_0765364233.001 RECID=11525 STAMP=775635598
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05764_0765364233.001 RECID=11527 STAMP=775636207
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05765_0765364233.001 RECID=11529 STAMP=775636238
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05766_0765364233.001 RECID=11531 STAMP=775636289
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05767_0765364233.001 RECID=11533 STAMP=775663668
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05768_0765364233.001 RECID=11535 STAMP=775678121
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05769_0765364233.001 RECID=11537 STAMP=775688475
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05770_0765364233.001 RECID=11539 STAMP=775689439
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5771_7N4JYRKD_.ARC RECID=11542 STAMP=775720813
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05771_0765364233.001 RECID=11541 STAMP=775720813
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5772_7N4K14RT_.ARC RECID=11544 STAMP=775720889
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05772_0765364233.001 RECID=11543 STAMP=775720889
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5773_7N4K4ZYD_.ARC RECID=11546 STAMP=775721012
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05773_0765364233.001 RECID=11545 STAMP=775721012
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5774_7N4KBBLY_.ARC RECID=11548 STAMP=775721182
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05774_0765364233.001 RECID=11547 STAMP=775721182
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5775_7N4KFKHR_.ARC RECID=11550 STAMP=775721285
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05775_0765364233.001 RECID=11549 STAMP=775721285
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5776_7N4KG4HB_.ARC RECID=11552 STAMP=775721304
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05776_0765364233.001 RECID=11551 STAMP=775721304
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5777_7N4KGP3P_.ARC RECID=11554 STAMP=775721322
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05777_0765364233.001 RECID=11553 STAMP=775721322
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5778_7N4KH679_.ARC RECID=11556 STAMP=775721338
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05778_0765364233.001 RECID=11555 STAMP=775721338
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5779_7N4KHPJ7_.ARC RECID=11558 STAMP=775721354
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05779_0765364233.001 RECID=11557 STAMP=775721354
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5780_7N4KJ6R6_.ARC RECID=11560 STAMP=775721371
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05780_0765364233.001 RECID=11559 STAMP=775721371
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5781_7N4KJQ1X_.ARC RECID=11562 STAMP=775721387
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05781_0765364233.001 RECID=11561 STAMP=775721387
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05782_0765364233.001 RECID=11563 STAMP=775721403
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5782_7N4KK7G9_.ARC RECID=11564 STAMP=775721403
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05783_0765364233.001 RECID=11565 STAMP=775721420
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5783_7N4KKQT5_.ARC RECID=11566 STAMP=775721420
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05784_0765364233.001 RECID=11567 STAMP=775721436
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5784_7N4KL7Z6_.ARC RECID=11568 STAMP=775721436
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05785_0765364233.001 RECID=11569 STAMP=775721452
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5785_7N4KLRHQ_.ARC RECID=11570 STAMP=775721452
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05786_0765364233.001 RECID=11571 STAMP=775721469
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5786_7N4KM954_.ARC RECID=11572 STAMP=775721469
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05787_0765364233.001 RECID=11573 STAMP=775721486
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5787_7N4KMTMW_.ARC RECID=11574 STAMP=775721486
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05788_0765364233.001 RECID=11575 STAMP=775721505
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5788_7N4KNCK3_.ARC RECID=11576 STAMP=775721505
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05789_0765364233.001 RECID=11577 STAMP=775721510
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5789_7N4KNHSO_.ARC RECID=11578 STAMP=775721510
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05790_0765364233.001 RECID=11579 STAMP=775721514
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5790_7N4KNN11_.ARC RECID=11580 STAMP=775721514
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05791_0765364233.001 RECID=11581 STAMP=775721518
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5791_7N4KNS0S_.ARC RECID=11582 STAMP=775721518
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05792_0765364233.001 RECID=11583 STAMP=775721523
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5792_7N4KNY8C_.ARC RECID=11584 STAMP=775721523
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05793_0765364233.001 RECID=11585 STAMP=775721528
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5793_7N4KO32Q_.ARC RECID=11586 STAMP=775721528
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05794_0765364233.001 RECID=11587 STAMP=775721532
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5794_7N4KO82Z_.ARC RECID=11588 STAMP=775721532
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05795_0765364233.001 RECID=11589 STAMP=775721539
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5795_7N4KOHHS_.ARC RECID=11590 STAMP=775721539
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05796_0765364233.001 RECID=11591 STAMP=775721552
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5796_7N4KOW10_.ARC RECID=11592 STAMP=775721552
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5797_7N4KP2BY_.ARC RECID=11594 STAMP=775721559
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05797_0765364233.001 RECID=11593 STAMP=775721558
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05798_0765364233.001 RECID=11595 STAMP=775721567
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5798_7N4KP9MV_.ARC RECID=11596 STAMP=775721567
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05799_0765364233.001 RECID=11597 STAMP=775721572
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5799_7N4KPGOL_.ARC RECID=11598 STAMP=775721572
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05800_0765364233.001 RECID=11599 STAMP=775721576
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5800_7N4KPMPR_.ARC RECID=11600 STAMP=775721576
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05801_0765364233.001 RECID=11601 STAMP=775721581
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5801_7N4KPRJ6_.ARC RECID=11602 STAMP=775721581
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05802_0765364233.001 RECID=11603 STAMP=775721586
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5802_7N4KPXNB_.ARC RECID=11604 STAMP=775721586
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05803_0765364233.001 RECID=11605 STAMP=775721591
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5803_7N4KQ2QZ_.ARC RECID=11606 STAMP=775721591
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05804_0765364233.001 RECID=11607 STAMP=775721597
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5804_7N4KQ8X1_.ARC RECID=11608 STAMP=775721597
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05805_0765364233.001 RECID=11609 STAMP=775721603
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5805_7N4KQG6S_.ARC RECID=11610 STAMP=775721603
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05806_0765364233.001 RECID=11611 STAMP=775721609
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5806_7N4KQMXY_.ARC RECID=11612 STAMP=775721609
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05807_0765364233.001 RECID=11613 STAMP=775721615
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5807_7N4KQSSR_.ARC RECID=11614 STAMP=775721615
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05808_0765364233.001 RECID=11615 STAMP=775721621
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5808_7N4KQZTX_.ARC RECID=11616 STAMP=775721621
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05809_0765364233.001 RECID=11617 STAMP=775721628
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5809_7N4KR6WJ_.ARC RECID=11618 STAMP=775721628
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05810_0765364233.001 RECID=11619 STAMP=775721638
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5810_7N4KRJ9Z_.ARC RECID=11620 STAMP=775721638
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05811_0765364233.001 RECID=11621 STAMP=775721684
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5811_7N4KSZNT_.ARC RECID=11622 STAMP=775721684
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05812_0765364233.001 RECID=11623 STAMP=775721711
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5812_7N4KTV9O_.ARC RECID=11624 STAMP=775721711
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05813_0765364233.001 RECID=11625 STAMP=775721752
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5813_7N4KW3GJ_.ARC RECID=11626 STAMP=775721752
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05814_0765364233.001 RECID=11627 STAMP=775721846
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5814_7N4KZ1F7_.ARC RECID=11628 STAMP=775721846
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05815_0765364233.001 RECID=11629 STAMP=775721891
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5815_7N4L0H9H_.ARC RECID=11630 STAMP=775721891
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05816_0765364233.001 RECID=11631 STAMP=775721985
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5816_7N4L3F86_.ARC RECID=11632 STAMP=775721985
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05817_0765364233.001 RECID=11633 STAMP=775722610
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5817_7N4LPWSG_.ARC RECID=11634 STAMP=775722610
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05818_0765364233.001 RECID=11635 STAMP=775722643
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5818_7N4LQYLD_.ARC RECID=11636 STAMP=775722643
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05819_0765364233.001 RECID=11637 STAMP=775722697
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5819_7N4LSO01_.ARC RECID=11638 STAMP=775722697
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05820_0765364233.001 RECID=11639 STAMP=775762082
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5820_7N5S8GPM_.ARC RECID=11640 STAMP=775762082
+Crosschecked 153 objects
+
+
+released channel: ORA_DISK_1
+allocated channel: ORA_DISK_1
+channel ORA_DISK_1: SID=194 device type=DISK
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05718_0765364233.001 RECID=11435 STAMP=775634420
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05719_0765364233.001 RECID=11437 STAMP=775634482
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05720_0765364233.001 RECID=11439 STAMP=775634602
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05721_0765364233.001 RECID=11441 STAMP=775634775
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05722_0765364233.001 RECID=11443 STAMP=775634906
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05723_0765364233.001 RECID=11445 STAMP=775634925
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05724_0765364233.001 RECID=11447 STAMP=775634943
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05725_0765364233.001 RECID=11449 STAMP=775634959
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05726_0765364233.001 RECID=11451 STAMP=775634975
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05727_0765364233.001 RECID=11453 STAMP=775634991
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05728_0765364233.001 RECID=11455 STAMP=775635007
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05729_0765364233.001 RECID=11457 STAMP=775635023
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05730_0765364233.001 RECID=11459 STAMP=775635039
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05731_0765364233.001 RECID=11461 STAMP=775635056
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05732_0765364233.001 RECID=11463 STAMP=775635072
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05733_0765364233.001 RECID=11465 STAMP=775635088
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05734_0765364233.001 RECID=11467 STAMP=775635106
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05735_0765364233.001 RECID=11469 STAMP=775635125
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05736_0765364233.001 RECID=11471 STAMP=775635130
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05737_0765364233.001 RECID=11473 STAMP=775635134
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05738_0765364233.001 RECID=11475 STAMP=775635138
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05739_0765364233.001 RECID=11477 STAMP=775635143
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05740_0765364233.001 RECID=11479 STAMP=775635148
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05741_0765364233.001 RECID=11481 STAMP=775635153
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05742_0765364233.001 RECID=11483 STAMP=775635159
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05743_0765364233.001 RECID=11485 STAMP=775635172
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05744_0765364233.001 RECID=11487 STAMP=775635179
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05745_0765364233.001 RECID=11489 STAMP=775635187
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05746_0765364233.001 RECID=11491 STAMP=775635191
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05747_0765364233.001 RECID=11493 STAMP=775635196
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05748_0765364233.001 RECID=11495 STAMP=775635200
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05749_0765364233.001 RECID=11497 STAMP=775635208
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05750_0765364233.001 RECID=11499 STAMP=775635212
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05751_0765364233.001 RECID=11501 STAMP=775635219
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05752_0765364233.001 RECID=11503 STAMP=775635224
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05753_0765364233.001 RECID=11505 STAMP=775635230
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05754_0765364233.001 RECID=11507 STAMP=775635235
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05755_0765364233.001 RECID=11509 STAMP=775635241
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05756_0765364233.001 RECID=11511 STAMP=775635248
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05757_0765364233.001 RECID=11513 STAMP=775635257
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05758_0765364233.001 RECID=11515 STAMP=775635303
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05759_0765364233.001 RECID=11517 STAMP=775635333
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05760_0765364233.001 RECID=11519 STAMP=775635369
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05761_0765364233.001 RECID=11521 STAMP=775635462
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05762_0765364233.001 RECID=11523 STAMP=775635504
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05763_0765364233.001 RECID=11525 STAMP=775635598
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05764_0765364233.001 RECID=11527 STAMP=775636207
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05765_0765364233.001 RECID=11529 STAMP=775636238
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05766_0765364233.001 RECID=11531 STAMP=775636289
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05767_0765364233.001 RECID=11533 STAMP=775663668
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05768_0765364233.001 RECID=11535 STAMP=775678121
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05769_0765364233.001 RECID=11537 STAMP=775688475
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05770_0765364233.001 RECID=11539 STAMP=775689439
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5771_7N4JYRKD_.ARC RECID=11542 STAMP=775720813
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05771_0765364233.001 RECID=11541 STAMP=775720813
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5772_7N4K14RT_.ARC RECID=11544 STAMP=775720889
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05772_0765364233.001 RECID=11543 STAMP=775720889
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5773_7N4K4ZYD_.ARC RECID=11546 STAMP=775721012
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05773_0765364233.001 RECID=11545 STAMP=775721012
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5774_7N4KBBLY_.ARC RECID=11548 STAMP=775721182
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05774_0765364233.001 RECID=11547 STAMP=775721182
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5775_7N4KFKHR_.ARC RECID=11550 STAMP=775721285
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05775_0765364233.001 RECID=11549 STAMP=775721285
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5776_7N4KG4HB_.ARC RECID=11552 STAMP=775721304
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05776_0765364233.001 RECID=11551 STAMP=775721304
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5777_7N4KGP3P_.ARC RECID=11554 STAMP=775721322
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05777_0765364233.001 RECID=11553 STAMP=775721322
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5778_7N4KH679_.ARC RECID=11556 STAMP=775721338
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05778_0765364233.001 RECID=11555 STAMP=775721338
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5779_7N4KHPJ7_.ARC RECID=11558 STAMP=775721354
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05779_0765364233.001 RECID=11557 STAMP=775721354
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5780_7N4KJ6R6_.ARC RECID=11560 STAMP=775721371
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05780_0765364233.001 RECID=11559 STAMP=775721371
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5781_7N4KJQ1X_.ARC RECID=11562 STAMP=775721387
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05781_0765364233.001 RECID=11561 STAMP=775721387
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05782_0765364233.001 RECID=11563 STAMP=775721403
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5782_7N4KK7G9_.ARC RECID=11564 STAMP=775721403
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05783_0765364233.001 RECID=11565 STAMP=775721420
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5783_7N4KKQT5_.ARC RECID=11566 STAMP=775721420
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05784_0765364233.001 RECID=11567 STAMP=775721436
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5784_7N4KL7Z6_.ARC RECID=11568 STAMP=775721436
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05785_0765364233.001 RECID=11569 STAMP=775721452
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5785_7N4KLRHQ_.ARC RECID=11570 STAMP=775721452
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05786_0765364233.001 RECID=11571 STAMP=775721469
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5786_7N4KM954_.ARC RECID=11572 STAMP=775721469
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05787_0765364233.001 RECID=11573 STAMP=775721486
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5787_7N4KMTMW_.ARC RECID=11574 STAMP=775721486
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05788_0765364233.001 RECID=11575 STAMP=775721505
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5788_7N4KNCK3_.ARC RECID=11576 STAMP=775721505
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05789_0765364233.001 RECID=11577 STAMP=775721510
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5789_7N4KNHSO_.ARC RECID=11578 STAMP=775721510
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05790_0765364233.001 RECID=11579 STAMP=775721514
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5790_7N4KNN11_.ARC RECID=11580 STAMP=775721514
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05791_0765364233.001 RECID=11581 STAMP=775721518
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5791_7N4KNS0S_.ARC RECID=11582 STAMP=775721518
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05792_0765364233.001 RECID=11583 STAMP=775721523
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5792_7N4KNY8C_.ARC RECID=11584 STAMP=775721523
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05793_0765364233.001 RECID=11585 STAMP=775721528
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5793_7N4KO32Q_.ARC RECID=11586 STAMP=775721528
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05794_0765364233.001 RECID=11587 STAMP=775721532
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5794_7N4KO82Z_.ARC RECID=11588 STAMP=775721532
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05795_0765364233.001 RECID=11589 STAMP=775721539
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5795_7N4KOHHS_.ARC RECID=11590 STAMP=775721539
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05796_0765364233.001 RECID=11591 STAMP=775721552
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5796_7N4KOW10_.ARC RECID=11592 STAMP=775721552
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5797_7N4KP2BY_.ARC RECID=11594 STAMP=775721559
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05797_0765364233.001 RECID=11593 STAMP=775721558
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05798_0765364233.001 RECID=11595 STAMP=775721567
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5798_7N4KP9MV_.ARC RECID=11596 STAMP=775721567
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05799_0765364233.001 RECID=11597 STAMP=775721572
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5799_7N4KPGOL_.ARC RECID=11598 STAMP=775721572
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05800_0765364233.001 RECID=11599 STAMP=775721576
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5800_7N4KPMPR_.ARC RECID=11600 STAMP=775721576
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05801_0765364233.001 RECID=11601 STAMP=775721581
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5801_7N4KPRJ6_.ARC RECID=11602 STAMP=775721581
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05802_0765364233.001 RECID=11603 STAMP=775721586
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5802_7N4KPXNB_.ARC RECID=11604 STAMP=775721586
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05803_0765364233.001 RECID=11605 STAMP=775721591
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5803_7N4KQ2QZ_.ARC RECID=11606 STAMP=775721591
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05804_0765364233.001 RECID=11607 STAMP=775721597
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5804_7N4KQ8X1_.ARC RECID=11608 STAMP=775721597
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05805_0765364233.001 RECID=11609 STAMP=775721603
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5805_7N4KQG6S_.ARC RECID=11610 STAMP=775721603
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05806_0765364233.001 RECID=11611 STAMP=775721609
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5806_7N4KQMXY_.ARC RECID=11612 STAMP=775721609
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05807_0765364233.001 RECID=11613 STAMP=775721615
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5807_7N4KQSSR_.ARC RECID=11614 STAMP=775721615
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05808_0765364233.001 RECID=11615 STAMP=775721621
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5808_7N4KQZTX_.ARC RECID=11616 STAMP=775721621
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05809_0765364233.001 RECID=11617 STAMP=775721628
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5809_7N4KR6WJ_.ARC RECID=11618 STAMP=775721628
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05810_0765364233.001 RECID=11619 STAMP=775721638
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5810_7N4KRJ9Z_.ARC RECID=11620 STAMP=775721638
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05811_0765364233.001 RECID=11621 STAMP=775721684
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5811_7N4KSZNT_.ARC RECID=11622 STAMP=775721684
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05812_0765364233.001 RECID=11623 STAMP=775721711
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5812_7N4KTV9O_.ARC RECID=11624 STAMP=775721711
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05813_0765364233.001 RECID=11625 STAMP=775721752
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5813_7N4KW3GJ_.ARC RECID=11626 STAMP=775721752
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05814_0765364233.001 RECID=11627 STAMP=775721846
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5814_7N4KZ1F7_.ARC RECID=11628 STAMP=775721846
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05815_0765364233.001 RECID=11629 STAMP=775721891
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5815_7N4L0H9H_.ARC RECID=11630 STAMP=775721891
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05816_0765364233.001 RECID=11631 STAMP=775721985
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5816_7N4L3F86_.ARC RECID=11632 STAMP=775721985
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05817_0765364233.001 RECID=11633 STAMP=775722610
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5817_7N4LPWSG_.ARC RECID=11634 STAMP=775722610
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05818_0765364233.001 RECID=11635 STAMP=775722643
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5818_7N4LQYLD_.ARC RECID=11636 STAMP=775722643
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05819_0765364233.001 RECID=11637 STAMP=775722697
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5819_7N4LSO01_.ARC RECID=11638 STAMP=775722697
+validation succeeded for archived log
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05820_0765364233.001 RECID=11639 STAMP=775762082
+validation succeeded for archived log
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5820_7N5S8GPM_.ARC RECID=11640 STAMP=775762082
+Crosschecked 153 objects
+
+
+RMAN retention policy will be applied to the command
+RMAN retention policy is set to recovery window of 7 days
+using channel ORA_DISK_1
+Deleting the following obsolete backups and copies:
+Type                 Key    Completion Time    Filename/Handle
+-------------------- ------ ------------------ --------------------
+Backup Set           539    11-FEB-12         
+  Backup Piece       539    11-FEB-12          E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_11\O1_MF_NNNDF_TAG20120211T211226_7MGH1K22_.BKP
+Backup Set           540    11-FEB-12         
+  Backup Piece       540    11-FEB-12          E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_11\O1_MF_ANNNN_TAG20120211T211739_7MGHC9S1_.BKP
+Backup Set           541    11-FEB-12         
+  Backup Piece       541    11-FEB-12          E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_11\O1_MF_S_774998267_7MGHCL43_.BKP
+Backup Set           543    12-FEB-12         
+  Backup Piece       543    12-FEB-12          E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_12\O1_MF_ANNNN_TAG20120212T210118_7MK32MRV_.BKP
+Backup Set           547    13-FEB-12         
+  Backup Piece       547    13-FEB-12          E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_13\O1_MF_ANNNN_TAG20120213T210327_7MMQ950Q_.BKP
+deleted backup piece
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_11\O1_MF_NNNDF_TAG20120211T211226_7MGH1K22_.BKP RECID=539 STAMP=774997953
+deleted backup piece
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_11\O1_MF_ANNNN_TAG20120211T211739_7MGHC9S1_.BKP RECID=540 STAMP=774998265
+deleted backup piece
+backup piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_11\O1_MF_S_774998267_7MGHCL43_.BKP RECID=541 STAMP=774998274
+deleted backup piece
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_12\O1_MF_ANNNN_TAG20120212T210118_7MK32MRV_.BKP RECID=543 STAMP=775084003
+deleted backup piece
+backup piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_13\O1_MF_ANNNN_TAG20120213T210327_7MMQ950Q_.BKP RECID=547 STAMP=775170228
+Deleted 5 objects
+
+
+
+Starting backup at 20-FEB-12
+current log archived
+using channel ORA_DISK_1
+channel ORA_DISK_1: starting compressed archived log backup set
+channel ORA_DISK_1: specifying archived log(s) in backup set
+input archived log thread=1 sequence=5718 RECID=11435 STAMP=775634420
+input archived log thread=1 sequence=5719 RECID=11437 STAMP=775634482
+input archived log thread=1 sequence=5720 RECID=11439 STAMP=775634602
+input archived log thread=1 sequence=5721 RECID=11441 STAMP=775634775
+input archived log thread=1 sequence=5722 RECID=11443 STAMP=775634906
+input archived log thread=1 sequence=5723 RECID=11445 STAMP=775634925
+input archived log thread=1 sequence=5724 RECID=11447 STAMP=775634943
+input archived log thread=1 sequence=5725 RECID=11449 STAMP=775634959
+input archived log thread=1 sequence=5726 RECID=11451 STAMP=775634975
+input archived log thread=1 sequence=5727 RECID=11453 STAMP=775634991
+input archived log thread=1 sequence=5728 RECID=11455 STAMP=775635007
+input archived log thread=1 sequence=5729 RECID=11457 STAMP=775635023
+input archived log thread=1 sequence=5730 RECID=11459 STAMP=775635039
+input archived log thread=1 sequence=5731 RECID=11461 STAMP=775635056
+input archived log thread=1 sequence=5732 RECID=11463 STAMP=775635072
+input archived log thread=1 sequence=5733 RECID=11465 STAMP=775635088
+input archived log thread=1 sequence=5734 RECID=11467 STAMP=775635106
+input archived log thread=1 sequence=5735 RECID=11469 STAMP=775635125
+input archived log thread=1 sequence=5736 RECID=11471 STAMP=775635130
+input archived log thread=1 sequence=5737 RECID=11473 STAMP=775635134
+input archived log thread=1 sequence=5738 RECID=11475 STAMP=775635138
+input archived log thread=1 sequence=5739 RECID=11477 STAMP=775635143
+input archived log thread=1 sequence=5740 RECID=11479 STAMP=775635148
+input archived log thread=1 sequence=5741 RECID=11481 STAMP=775635153
+input archived log thread=1 sequence=5742 RECID=11483 STAMP=775635159
+input archived log thread=1 sequence=5743 RECID=11485 STAMP=775635172
+input archived log thread=1 sequence=5744 RECID=11487 STAMP=775635179
+input archived log thread=1 sequence=5745 RECID=11489 STAMP=775635187
+input archived log thread=1 sequence=5746 RECID=11491 STAMP=775635191
+input archived log thread=1 sequence=5747 RECID=11493 STAMP=775635196
+input archived log thread=1 sequence=5748 RECID=11495 STAMP=775635200
+input archived log thread=1 sequence=5749 RECID=11497 STAMP=775635208
+input archived log thread=1 sequence=5750 RECID=11499 STAMP=775635212
+input archived log thread=1 sequence=5751 RECID=11501 STAMP=775635219
+input archived log thread=1 sequence=5752 RECID=11503 STAMP=775635224
+input archived log thread=1 sequence=5753 RECID=11505 STAMP=775635230
+input archived log thread=1 sequence=5754 RECID=11507 STAMP=775635235
+input archived log thread=1 sequence=5755 RECID=11509 STAMP=775635241
+input archived log thread=1 sequence=5756 RECID=11511 STAMP=775635248
+input archived log thread=1 sequence=5757 RECID=11513 STAMP=775635257
+input archived log thread=1 sequence=5758 RECID=11515 STAMP=775635303
+input archived log thread=1 sequence=5759 RECID=11517 STAMP=775635333
+input archived log thread=1 sequence=5760 RECID=11519 STAMP=775635369
+input archived log thread=1 sequence=5761 RECID=11521 STAMP=775635462
+input archived log thread=1 sequence=5762 RECID=11523 STAMP=775635504
+input archived log thread=1 sequence=5763 RECID=11525 STAMP=775635598
+input archived log thread=1 sequence=5764 RECID=11527 STAMP=775636207
+input archived log thread=1 sequence=5765 RECID=11529 STAMP=775636238
+input archived log thread=1 sequence=5766 RECID=11531 STAMP=775636289
+input archived log thread=1 sequence=5767 RECID=11533 STAMP=775663668
+input archived log thread=1 sequence=5768 RECID=11535 STAMP=775678121
+input archived log thread=1 sequence=5769 RECID=11537 STAMP=775688475
+channel ORA_DISK_1: starting piece 1 at 20-FEB-12
+channel ORA_DISK_1: finished piece 1 at 20-FEB-12
+piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_20\O1_MF_ANNNN_TAG20120220T210338_7N65XJK9_.BKP tag=TAG20120220T210338 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:04:56
+channel ORA_DISK_1: deleting archived log(s)
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05718_0765364233.001 RECID=11435 STAMP=775634420
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05719_0765364233.001 RECID=11437 STAMP=775634482
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05720_0765364233.001 RECID=11439 STAMP=775634602
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05721_0765364233.001 RECID=11441 STAMP=775634775
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05722_0765364233.001 RECID=11443 STAMP=775634906
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05723_0765364233.001 RECID=11445 STAMP=775634925
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05724_0765364233.001 RECID=11447 STAMP=775634943
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05725_0765364233.001 RECID=11449 STAMP=775634959
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05726_0765364233.001 RECID=11451 STAMP=775634975
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05727_0765364233.001 RECID=11453 STAMP=775634991
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05728_0765364233.001 RECID=11455 STAMP=775635007
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05729_0765364233.001 RECID=11457 STAMP=775635023
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05730_0765364233.001 RECID=11459 STAMP=775635039
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05731_0765364233.001 RECID=11461 STAMP=775635056
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05732_0765364233.001 RECID=11463 STAMP=775635072
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05733_0765364233.001 RECID=11465 STAMP=775635088
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05734_0765364233.001 RECID=11467 STAMP=775635106
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05735_0765364233.001 RECID=11469 STAMP=775635125
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05736_0765364233.001 RECID=11471 STAMP=775635130
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05737_0765364233.001 RECID=11473 STAMP=775635134
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05738_0765364233.001 RECID=11475 STAMP=775635138
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05739_0765364233.001 RECID=11477 STAMP=775635143
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05740_0765364233.001 RECID=11479 STAMP=775635148
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05741_0765364233.001 RECID=11481 STAMP=775635153
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05742_0765364233.001 RECID=11483 STAMP=775635159
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05743_0765364233.001 RECID=11485 STAMP=775635172
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05744_0765364233.001 RECID=11487 STAMP=775635179
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05745_0765364233.001 RECID=11489 STAMP=775635187
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05746_0765364233.001 RECID=11491 STAMP=775635191
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05747_0765364233.001 RECID=11493 STAMP=775635196
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05748_0765364233.001 RECID=11495 STAMP=775635200
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05749_0765364233.001 RECID=11497 STAMP=775635208
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05750_0765364233.001 RECID=11499 STAMP=775635212
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05751_0765364233.001 RECID=11501 STAMP=775635219
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05752_0765364233.001 RECID=11503 STAMP=775635224
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05753_0765364233.001 RECID=11505 STAMP=775635230
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05754_0765364233.001 RECID=11507 STAMP=775635235
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05755_0765364233.001 RECID=11509 STAMP=775635241
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05756_0765364233.001 RECID=11511 STAMP=775635248
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05757_0765364233.001 RECID=11513 STAMP=775635257
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05758_0765364233.001 RECID=11515 STAMP=775635303
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05759_0765364233.001 RECID=11517 STAMP=775635333
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05760_0765364233.001 RECID=11519 STAMP=775635369
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05761_0765364233.001 RECID=11521 STAMP=775635462
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05762_0765364233.001 RECID=11523 STAMP=775635504
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05763_0765364233.001 RECID=11525 STAMP=775635598
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05764_0765364233.001 RECID=11527 STAMP=775636207
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05765_0765364233.001 RECID=11529 STAMP=775636238
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05766_0765364233.001 RECID=11531 STAMP=775636289
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05767_0765364233.001 RECID=11533 STAMP=775663668
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05768_0765364233.001 RECID=11535 STAMP=775678121
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05769_0765364233.001 RECID=11537 STAMP=775688475
+channel ORA_DISK_1: starting compressed archived log backup set
+channel ORA_DISK_1: specifying archived log(s) in backup set
+input archived log thread=1 sequence=5770 RECID=11539 STAMP=775689439
+input archived log thread=1 sequence=5771 RECID=11542 STAMP=775720813
+input archived log thread=1 sequence=5772 RECID=11544 STAMP=775720889
+input archived log thread=1 sequence=5773 RECID=11546 STAMP=775721012
+input archived log thread=1 sequence=5774 RECID=11548 STAMP=775721182
+input archived log thread=1 sequence=5775 RECID=11550 STAMP=775721285
+input archived log thread=1 sequence=5776 RECID=11552 STAMP=775721304
+input archived log thread=1 sequence=5777 RECID=11554 STAMP=775721322
+input archived log thread=1 sequence=5778 RECID=11556 STAMP=775721338
+input archived log thread=1 sequence=5779 RECID=11558 STAMP=775721354
+input archived log thread=1 sequence=5780 RECID=11560 STAMP=775721371
+input archived log thread=1 sequence=5781 RECID=11562 STAMP=775721387
+input archived log thread=1 sequence=5782 RECID=11564 STAMP=775721403
+input archived log thread=1 sequence=5783 RECID=11566 STAMP=775721420
+input archived log thread=1 sequence=5784 RECID=11568 STAMP=775721436
+input archived log thread=1 sequence=5785 RECID=11570 STAMP=775721452
+input archived log thread=1 sequence=5786 RECID=11572 STAMP=775721469
+input archived log thread=1 sequence=5787 RECID=11574 STAMP=775721486
+input archived log thread=1 sequence=5788 RECID=11576 STAMP=775721505
+input archived log thread=1 sequence=5789 RECID=11578 STAMP=775721510
+input archived log thread=1 sequence=5790 RECID=11580 STAMP=775721514
+input archived log thread=1 sequence=5791 RECID=11582 STAMP=775721518
+input archived log thread=1 sequence=5792 RECID=11584 STAMP=775721523
+input archived log thread=1 sequence=5793 RECID=11586 STAMP=775721528
+input archived log thread=1 sequence=5794 RECID=11588 STAMP=775721532
+input archived log thread=1 sequence=5795 RECID=11590 STAMP=775721539
+input archived log thread=1 sequence=5796 RECID=11592 STAMP=775721552
+input archived log thread=1 sequence=5797 RECID=11594 STAMP=775721559
+input archived log thread=1 sequence=5798 RECID=11596 STAMP=775721567
+input archived log thread=1 sequence=5799 RECID=11598 STAMP=775721572
+input archived log thread=1 sequence=5800 RECID=11600 STAMP=775721576
+input archived log thread=1 sequence=5801 RECID=11602 STAMP=775721581
+input archived log thread=1 sequence=5802 RECID=11604 STAMP=775721586
+input archived log thread=1 sequence=5803 RECID=11606 STAMP=775721591
+input archived log thread=1 sequence=5804 RECID=11608 STAMP=775721597
+input archived log thread=1 sequence=5805 RECID=11610 STAMP=775721603
+input archived log thread=1 sequence=5806 RECID=11612 STAMP=775721609
+input archived log thread=1 sequence=5807 RECID=11614 STAMP=775721615
+input archived log thread=1 sequence=5808 RECID=11616 STAMP=775721621
+input archived log thread=1 sequence=5809 RECID=11618 STAMP=775721628
+input archived log thread=1 sequence=5810 RECID=11620 STAMP=775721638
+input archived log thread=1 sequence=5811 RECID=11622 STAMP=775721684
+input archived log thread=1 sequence=5812 RECID=11624 STAMP=775721711
+input archived log thread=1 sequence=5813 RECID=11626 STAMP=775721752
+input archived log thread=1 sequence=5814 RECID=11628 STAMP=775721846
+input archived log thread=1 sequence=5815 RECID=11630 STAMP=775721891
+input archived log thread=1 sequence=5816 RECID=11632 STAMP=775721985
+input archived log thread=1 sequence=5817 RECID=11634 STAMP=775722610
+input archived log thread=1 sequence=5818 RECID=11636 STAMP=775722643
+input archived log thread=1 sequence=5819 RECID=11638 STAMP=775722697
+input archived log thread=1 sequence=5820 RECID=11640 STAMP=775762082
+input archived log thread=1 sequence=5821 RECID=11642 STAMP=775775018
+channel ORA_DISK_1: starting piece 1 at 20-FEB-12
+channel ORA_DISK_1: finished piece 1 at 20-FEB-12
+piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_20\O1_MF_ANNNN_TAG20120220T210338_7N667CCT_.BKP tag=TAG20120220T210338 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:04:56
+channel ORA_DISK_1: deleting archived log(s)
+archived log file name=C:\ORACLE\PRODUCT\11.1.0\DB_1\RDBMS\ARC05770_0765364233.001 RECID=11539 STAMP=775689439
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5771_7N4JYRKD_.ARC RECID=11542 STAMP=775720813
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5772_7N4K14RT_.ARC RECID=11544 STAMP=775720889
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5773_7N4K4ZYD_.ARC RECID=11546 STAMP=775721012
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5774_7N4KBBLY_.ARC RECID=11548 STAMP=775721182
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5775_7N4KFKHR_.ARC RECID=11550 STAMP=775721285
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5776_7N4KG4HB_.ARC RECID=11552 STAMP=775721304
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5777_7N4KGP3P_.ARC RECID=11554 STAMP=775721322
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5778_7N4KH679_.ARC RECID=11556 STAMP=775721338
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5779_7N4KHPJ7_.ARC RECID=11558 STAMP=775721354
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5780_7N4KJ6R6_.ARC RECID=11560 STAMP=775721371
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5781_7N4KJQ1X_.ARC RECID=11562 STAMP=775721387
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5782_7N4KK7G9_.ARC RECID=11564 STAMP=775721403
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5783_7N4KKQT5_.ARC RECID=11566 STAMP=775721420
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5784_7N4KL7Z6_.ARC RECID=11568 STAMP=775721436
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5785_7N4KLRHQ_.ARC RECID=11570 STAMP=775721452
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5786_7N4KM954_.ARC RECID=11572 STAMP=775721469
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5787_7N4KMTMW_.ARC RECID=11574 STAMP=775721486
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5788_7N4KNCK3_.ARC RECID=11576 STAMP=775721505
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5789_7N4KNHSO_.ARC RECID=11578 STAMP=775721510
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5790_7N4KNN11_.ARC RECID=11580 STAMP=775721514
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5791_7N4KNS0S_.ARC RECID=11582 STAMP=775721518
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5792_7N4KNY8C_.ARC RECID=11584 STAMP=775721523
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5793_7N4KO32Q_.ARC RECID=11586 STAMP=775721528
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5794_7N4KO82Z_.ARC RECID=11588 STAMP=775721532
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5795_7N4KOHHS_.ARC RECID=11590 STAMP=775721539
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5796_7N4KOW10_.ARC RECID=11592 STAMP=775721552
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5797_7N4KP2BY_.ARC RECID=11594 STAMP=775721559
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5798_7N4KP9MV_.ARC RECID=11596 STAMP=775721567
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5799_7N4KPGOL_.ARC RECID=11598 STAMP=775721572
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5800_7N4KPMPR_.ARC RECID=11600 STAMP=775721576
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5801_7N4KPRJ6_.ARC RECID=11602 STAMP=775721581
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5802_7N4KPXNB_.ARC RECID=11604 STAMP=775721586
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5803_7N4KQ2QZ_.ARC RECID=11606 STAMP=775721591
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5804_7N4KQ8X1_.ARC RECID=11608 STAMP=775721597
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5805_7N4KQG6S_.ARC RECID=11610 STAMP=775721603
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5806_7N4KQMXY_.ARC RECID=11612 STAMP=775721609
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5807_7N4KQSSR_.ARC RECID=11614 STAMP=775721615
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5808_7N4KQZTX_.ARC RECID=11616 STAMP=775721621
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5809_7N4KR6WJ_.ARC RECID=11618 STAMP=775721628
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5810_7N4KRJ9Z_.ARC RECID=11620 STAMP=775721638
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5811_7N4KSZNT_.ARC RECID=11622 STAMP=775721684
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5812_7N4KTV9O_.ARC RECID=11624 STAMP=775721711
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5813_7N4KW3GJ_.ARC RECID=11626 STAMP=775721752
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5814_7N4KZ1F7_.ARC RECID=11628 STAMP=775721846
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5815_7N4L0H9H_.ARC RECID=11630 STAMP=775721891
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5816_7N4L3F86_.ARC RECID=11632 STAMP=775721985
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5817_7N4LPWSG_.ARC RECID=11634 STAMP=775722610
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5818_7N4LQYLD_.ARC RECID=11636 STAMP=775722643
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5819_7N4LSO01_.ARC RECID=11638 STAMP=775722697
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5820_7N5S8GPM_.ARC RECID=11640 STAMP=775762082
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5821_7N65WP6D_.ARC RECID=11642 STAMP=775775018
+Finished backup at 20-FEB-12
+
+Starting backup at 20-FEB-12
+using channel ORA_DISK_1
+channel ORA_DISK_1: starting compressed full datafile backup set
+channel ORA_DISK_1: specifying datafile(s) in backup set
+input datafile file number=00005 name=D:\ORACLE\ORADATA\GIANTCHICKEN\GIANTCHICKEN.ORA
+input datafile file number=00003 name=D:\ORACLE\ORADATA\GIANTCHICKEN\DATAFILE\O1_MF_UNDOTBS1_7BBZTWB0_.DBF
+input datafile file number=00002 name=D:\ORACLE\ORADATA\GIANTCHICKEN\DATAFILE\O1_MF_SYSAUX_7BBZTW6M_.DBF
+input datafile file number=00001 name=D:\ORACLE\ORADATA\GIANTCHICKEN\DATAFILE\O1_MF_SYSTEM_7BBZTW45_.DBF
+input datafile file number=00004 name=D:\ORACLE\ORADATA\GIANTCHICKEN\DATAFILE\O1_MF_USERS_7BBZTWFF_.DBF
+channel ORA_DISK_1: starting piece 1 at 20-FEB-12
+channel ORA_DISK_1: finished piece 1 at 20-FEB-12
+piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_20\O1_MF_NNNDF_TAG20120220T211419_7N66K306_.BKP tag=TAG20120220T211419 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:04:56
+Finished backup at 20-FEB-12
+
+Starting backup at 20-FEB-12
+current log archived
+using channel ORA_DISK_1
+channel ORA_DISK_1: starting compressed archived log backup set
+channel ORA_DISK_1: specifying archived log(s) in backup set
+input archived log thread=1 sequence=5822 RECID=11644 STAMP=775775963
+channel ORA_DISK_1: starting piece 1 at 20-FEB-12
+channel ORA_DISK_1: finished piece 1 at 20-FEB-12
+piece handle=E:\FRA\GIANTCHICKEN\BACKUPSET\2012_02_20\O1_MF_ANNNN_TAG20120220T211923_7N66TL53_.BKP tag=TAG20120220T211923 comment=NONE
+channel ORA_DISK_1: backup set complete, elapsed time: 00:00:01
+channel ORA_DISK_1: deleting archived log(s)
+archived log file name=E:\FRA\GIANTCHICKEN\ARCHIVELOG\2012_02_20\O1_MF_1_5822_7N66TC2J_.ARC RECID=11644 STAMP=775775963
+Finished backup at 20-FEB-12
+
+Starting Control File and SPFILE Autobackup at 20-FEB-12
+piece handle=E:\FRA\GIANTCHICKEN\AUTOBACKUP\2012_02_20\O1_MF_S_775775976_7N66TTOR_.BKP comment=NONE
+Finished Control File and SPFILE Autobackup at 20-FEB-12
+
+Recovery Manager complete.

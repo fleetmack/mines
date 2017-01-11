@@ -1,0 +1,21 @@
+;;; 
+Import: Release 11.1.0.6.0 - 64bit Production on Monday, 24 October, 2011 14:25:06
+
+Copyright (c) 2003, 2007, Oracle.  All rights reserved.
+;;; 
+Connected to: Oracle Database 11g Enterprise Edition Release 11.1.0.6.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+Master table "ADVANCE"."SYS_IMPORT_TABLE_01" successfully loaded/unloaded
+Starting "ADVANCE"."SYS_IMPORT_TABLE_01":  advance/********@testing DIRECTORY=DATA_PUMP_DIR TABLE_EXISTS_ACTION=REPLACE LOGFILE=import_table.log dumpfile=GiantChicken_A_ZZ_USER_TABLES.dmp tables=(ZZ_USER,ZZ_USER_RIGHTS,ZZ_USER_PREF,ZZ_USER_ALIAS,ZZ_USER_GROUP) 
+Processing object type TABLE_EXPORT/TABLE/TABLE
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+. . imported "ADVANCE"."ZZ_USER"                         37.53 KB     106 rows
+. . imported "ADVANCE"."ZZ_USER_ALIAS"                   9.062 KB      24 rows
+. . imported "ADVANCE"."ZZ_USER_GROUP"                   6.960 KB       7 rows
+. . imported "ADVANCE"."ZZ_USER_PREF"                     9.25 KB      39 rows
+. . imported "ADVANCE"."ZZ_USER_RIGHTS"                  19.77 KB     313 rows
+Processing object type TABLE_EXPORT/TABLE/INDEX/INDEX
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type TABLE_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Job "ADVANCE"."SYS_IMPORT_TABLE_01" successfully completed at 14:25:13

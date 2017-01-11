@@ -1,0 +1,77 @@
+;;; 
+Export: Release 11.1.0.6.0 - 64bit Production on Monday, 20 February, 2012 20:50:18
+
+Copyright (c) 2003, 2007, Oracle.  All rights reserved.
+;;; 
+Connected to: Oracle Database 11g Enterprise Edition Release 11.1.0.6.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+Starting "ADVANCE"."SYS_EXPORT_TABLE_01":  advance/********@giantchicken VERSION=10.2 DIRECTORY=zz_mt_dump_files dumpfile=giantchicken_zz_mt_tables.dmp tables=('ZZ_MT_APP_FORMS','ZZ_MT_APP_MENU_ITEMS','ZZ_MT_APPS','ZZ_MT_APPS_OPTIONS','ZZ_MT_APPS_SECURITY','ZZ_MT_ATTACHMENT_MIME','ZZ_MT_AWC_MENU_TREE','ZZ_MT_AWC_MENU_TREE_PARAMETERS','ZZ_MT_CRYSTAL_REPORTS','ZZ_MT_DATA_CLUMP','ZZ_MT_DATA_CMD','ZZ_MT_DATA_PARAMS','ZZ_MT_DATA_UPLOAD_FIELD','ZZ_MT_DATA_UPLOAD_TABLE','ZZ_MT_DB','ZZ_MT_DRILLDOWN','ZZ_MT_DRILLDOWN_PARAMS','ZZ_MT_FORMS','ZZ_MT_FORMS_CONTROLS','ZZ_MT_FORMS_HEADER','ZZ_MT_FORMS_OPTIONS','ZZ_MT_FORMS_RELATIONS','ZZ_MT_FORMS_SECURITY','ZZ_MT_GOTO','ZZ_MT_GOTO_TYPES','ZZ_MT_HELP','ZZ_MT_LOOKUP_DETAIL','ZZ_MT_LOOKUP_HEADER','ZZ_MT_LOOKUP_SECURITY','ZZ_MT_MENU','ZZ_MT_MENU_ITEMS','ZZ_MT_MENU_TREE','ZZ_MT_MSGS','ZZ_MT_PAGE','ZZ_MT_PAGE_NAV_IMAGES','ZZ_MT_PAGE_NAV_TREE','ZZ_MT_PAGE_SECURITY','ZZ_MT_PROFILE','ZZ_MT_PROFILE_LEVEL','ZZ_MT_PT_SUMMARY_NODES','ZZ_MT_REPORTS','ZZ_MT_REPORTS_GROUP','ZZ_MT_REPORTS_SECURITY','ZZ_MT_SAVED_LOOKUP','ZZ_MT_SAVED_LOOKUP_DETAIL','ZZ_MT_SAVED_LOOKUP_FORM','ZZ_MT_SAVED_LOOKUP_RIGHT','ZZ_MT_SITE','ZZ_MT_SYSOPTIONS','ZZ_MT_TMS_ATTRIBUTES','ZZ_MT_TMS_HELP','ZZ_MT_TOKEN','ZZ_MT_USER_FORMS','ZZ_MT_USER_PROFILE','ZZ_RIGHTS_IDENTIFIER') logfile=export_zz_mt_tables.log 
+Estimate in progress using BLOCKS method...
+Processing object type TABLE_EXPORT/TABLE/TABLE_DATA
+Total estimation using BLOCKS method: 17 MB
+Processing object type TABLE_EXPORT/TABLE/TABLE
+Processing object type TABLE_EXPORT/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+Processing object type TABLE_EXPORT/TABLE/INDEX/INDEX
+Processing object type TABLE_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Processing object type TABLE_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Processing object type TABLE_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+. . exported "ADVANCE"."ZZ_MT_FORMS_CONTROLS"            6.709 MB   34185 rows
+. . exported "ADVANCE"."ZZ_MT_CRYSTAL_REPORTS"           1.655 MB      10 rows
+. . exported "ADVANCE"."ZZ_MT_DATA_UPLOAD_FIELD"         406.4 KB    5177 rows
+. . exported "ADVANCE"."ZZ_MT_FORMS_OPTIONS"             352.4 KB    5259 rows
+. . exported "ADVANCE"."ZZ_MT_DATA_PARAMS"               257.6 KB    3620 rows
+. . exported "ADVANCE"."ZZ_MT_FORMS"                     269.6 KB    2273 rows
+. . exported "ADVANCE"."ZZ_MT_APPS"                      225.4 KB    1334 rows
+. . exported "ADVANCE"."ZZ_MT_FORMS_SECURITY"            233.8 KB    4335 rows
+. . exported "ADVANCE"."ZZ_MT_APPS_SECURITY"             164.3 KB    2663 rows
+. . exported "ADVANCE"."ZZ_MT_DATA_CMD"                  144.9 KB    1903 rows
+. . exported "ADVANCE"."ZZ_MT_MSGS"                      182.9 KB    1051 rows
+. . exported "ADVANCE"."ZZ_MT_APP_FORMS"                 122.1 KB    2535 rows
+. . exported "ADVANCE"."ZZ_MT_DATA_CLUMP"                113.4 KB    1509 rows
+. . exported "ADVANCE"."ZZ_MT_PAGE_NAV_TREE"             96.84 KB     768 rows
+. . exported "ADVANCE"."ZZ_MT_HELP"                      97.34 KB    1227 rows
+. . exported "ADVANCE"."ZZ_MT_MENU_TREE"                 73.73 KB    1365 rows
+. . exported "ADVANCE"."ZZ_MT_TMS_ATTRIBUTES"            62.25 KB     742 rows
+. . exported "ADVANCE"."ZZ_MT_APPS_OPTIONS"              21.80 KB     197 rows
+. . exported "ADVANCE"."ZZ_MT_APP_MENU_ITEMS"            18.96 KB     244 rows
+. . exported "ADVANCE"."ZZ_MT_ATTACHMENT_MIME"           7.953 KB      17 rows
+. . exported "ADVANCE"."ZZ_MT_AWC_MENU_TREE"             11.64 KB       1 rows
+. . exported "ADVANCE"."ZZ_MT_AWC_MENU_TREE_PARAMETERS"  14.15 KB      17 rows
+. . exported "ADVANCE"."ZZ_MT_DATA_UPLOAD_TABLE"         19.10 KB     250 rows
+. . exported "ADVANCE"."ZZ_MT_DB"                        7.187 KB       3 rows
+. . exported "ADVANCE"."ZZ_MT_DRILLDOWN"                 22.89 KB     218 rows
+. . exported "ADVANCE"."ZZ_MT_DRILLDOWN_PARAMS"          30.71 KB     328 rows
+. . exported "ADVANCE"."ZZ_MT_FORMS_HEADER"              8.890 KB       2 rows
+. . exported "ADVANCE"."ZZ_MT_FORMS_RELATIONS"           32.59 KB     377 rows
+. . exported "ADVANCE"."ZZ_MT_GOTO"                      30.62 KB     183 rows
+. . exported "ADVANCE"."ZZ_MT_GOTO_TYPES"                10.25 KB      21 rows
+. . exported "ADVANCE"."ZZ_MT_MENU"                      19.42 KB     128 rows
+. . exported "ADVANCE"."ZZ_MT_MENU_ITEMS"                33.41 KB     293 rows
+. . exported "ADVANCE"."ZZ_MT_PAGE"                      17.86 KB      92 rows
+. . exported "ADVANCE"."ZZ_MT_PAGE_NAV_IMAGES"           7.757 KB       4 rows
+. . exported "ADVANCE"."ZZ_MT_PROFILE"                   8.296 KB       6 rows
+. . exported "ADVANCE"."ZZ_MT_PROFILE_LEVEL"             8.187 KB       6 rows
+. . exported "ADVANCE"."ZZ_MT_PT_SUMMARY_NODES"          9.554 KB      35 rows
+. . exported "ADVANCE"."ZZ_MT_REPORTS"                   41.35 KB     212 rows
+. . exported "ADVANCE"."ZZ_MT_REPORTS_GROUP"             12.18 KB     146 rows
+. . exported "ADVANCE"."ZZ_MT_REPORTS_SECURITY"          19.40 KB     330 rows
+. . exported "ADVANCE"."ZZ_MT_SAVED_LOOKUP"              11.69 KB      29 rows
+. . exported "ADVANCE"."ZZ_MT_SAVED_LOOKUP_FORM"         11.84 KB      89 rows
+. . exported "ADVANCE"."ZZ_MT_SITE"                      8.062 KB       2 rows
+. . exported "ADVANCE"."ZZ_MT_SYSOPTIONS"                27.33 KB     128 rows
+. . exported "ADVANCE"."ZZ_MT_TMS_HELP"                  23.01 KB     439 rows
+. . exported "ADVANCE"."ZZ_MT_TOKEN"                     8.726 KB      18 rows
+. . exported "ADVANCE"."ZZ_MT_USER_PROFILE"              7.953 KB       9 rows
+. . exported "ADVANCE"."ZZ_RIGHTS_IDENTIFIER"            13.58 KB      60 rows
+. . exported "ADVANCE"."ZZ_MT_LOOKUP_DETAIL"                 0 KB       0 rows
+. . exported "ADVANCE"."ZZ_MT_LOOKUP_HEADER"                 0 KB       0 rows
+. . exported "ADVANCE"."ZZ_MT_LOOKUP_SECURITY"               0 KB       0 rows
+. . exported "ADVANCE"."ZZ_MT_PAGE_SECURITY"                 0 KB       0 rows
+. . exported "ADVANCE"."ZZ_MT_SAVED_LOOKUP_DETAIL"           0 KB       0 rows
+. . exported "ADVANCE"."ZZ_MT_SAVED_LOOKUP_RIGHT"            0 KB       0 rows
+. . exported "ADVANCE"."ZZ_MT_USER_FORMS"                    0 KB       0 rows
+Master table "ADVANCE"."SYS_EXPORT_TABLE_01" successfully loaded/unloaded
+******************************************************************************
+Dump file set for ADVANCE.SYS_EXPORT_TABLE_01 is:
+  D:\IMPORTS_EXPORTS\DATA_PUMP\ZZ_MT\GIANTCHICKEN_ZZ_MT_TABLES.DMP
+Job "ADVANCE"."SYS_EXPORT_TABLE_01" successfully completed at 20:50:57
