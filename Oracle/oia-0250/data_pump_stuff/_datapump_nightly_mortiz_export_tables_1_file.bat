@@ -1,5 +1,5 @@
 
-expdp advance/Phate6211 DIRECTORY=DATA_PUMP_DIR                                 
+expdp advance/blah DIRECTORY=DATA_PUMP_DIR                                 
 dumpfile=mortiz_table_dump.dmp                                                  
 tables=(  A_AG_RESPONSE, A_ASK_FULFILLMENT, A_DIR_MAIL_ANAL, A_TEMP_DIR_MAIL_
 ANAL,  A_DNR_RETENTION, A_TEMP_PHONE_ALLOC, A_DW_PHONE_TY, A_ACK_RCPT3, A_AC

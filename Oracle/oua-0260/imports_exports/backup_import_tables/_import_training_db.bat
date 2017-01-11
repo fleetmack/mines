@@ -1,1 +1,1 @@
-imp.exe advance/Phate6211@training  file=d:\imports_exports\backup_import_tables\adv9_train.exp fromuser=adv9_train touser=advance LOG=d:\imports_exports\backup_import_tables\adv9_train.imp.log ignore=Y full=N grants=N indexes=Y rows=Y buffer=60000 compile=N
+imp.exe advance/blah@training  file=d:\imports_exports\backup_import_tables\adv9_train.exp fromuser=adv9_train touser=advance LOG=d:\imports_exports\backup_import_tables\adv9_train.imp.log ignore=Y full=N grants=N indexes=Y rows=Y buffer=60000 compile=N

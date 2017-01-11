@@ -8,7 +8,7 @@ ren d:\imports_exports\data_pump\ADVANCE10G_1.DMP   ADVANCE10G_2.DMP
 ren d:\imports_exports\data_pump\ADVANCE10G.DMP   ADVANCE10G_1.DMP
 
 
-expdp advance/Phate6211 DIRECTORY=DATA_PUMP_DIR dumpfile=advance10g.dmp logfile=export_schema.log schemas=advance
+expdp advance/blah DIRECTORY=DATA_PUMP_DIR dumpfile=advance10g.dmp logfile=export_schema.log schemas=advance
 
 copy /y d:\imports_exports\data_pump\ADVANCE10G.DMP d:\imports_exports\data_pump\dump_files\
 copy /y d:\imports_exports\data_pump\ADVANCE10G_1.DMP d:\imports_exports\data_pump\dump_files\
