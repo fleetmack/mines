@@ -1,6 +1,0 @@
-standardized refresh of ResearchPoint data & Advance Data
-Completed parent load process - getting parents in database by the end of August rather than mid-October/early November via the old process
-Harris stuff? Directory?
-Re-wrote acknowledgment process again (August/Sept)
-Re-wrote acknowledgement email process again (mid-year, December)
-
